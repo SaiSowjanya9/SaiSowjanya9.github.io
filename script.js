@@ -391,26 +391,22 @@ function initContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Submit to Formspree
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                form.reset();
-            } else {
-                submitBtn.innerHTML = '<i class="fas fa-times"></i> Error!';
-                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
-            }
-        } catch (error) {
-            submitBtn.innerHTML = '<i class="fas fa-times"></i> Error!';
-            submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
-        }
+        // Get form data
+        const name = form.querySelector('#name').value;
+        const email = form.querySelector('#email').value;
+        const subject = form.querySelector('#subject').value;
+        const message = form.querySelector('#message').value;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:saisowjanya218@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Opening Email...';
+        submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        form.reset();
         
         // Reset button after delay
         setTimeout(() => {
