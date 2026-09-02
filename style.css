@@ -51,15 +51,61 @@
 /* Light Theme */
 [data-theme="light"] {
     --bg-primary: #f8fafc;
-    --bg-secondary: #f1f5f9;
-    --bg-tertiary: #e2e8f0;
-    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.95);
     
     --text-primary: #1e293b;
     --text-secondary: #475569;
-    --text-muted: #94a3b8;
+    --text-muted: #64748b;
     
-    --accent-glow: rgba(99, 102, 241, 0.2);
+    --accent-glow: rgba(99, 102, 241, 0.3);
+}
+
+/* Light Theme - Code Block */
+[data-theme="light"] .code-block {
+    background: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .code-block::before {
+    background: #334155;
+}
+
+/* Light Theme - Cards & Sections */
+[data-theme="light"] .about-card,
+[data-theme="light"] .skill-category,
+[data-theme="light"] .project-card,
+[data-theme="light"] .edu-card,
+[data-theme="light"] .leadership-card,
+[data-theme="light"] .contact-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .timeline-item::before {
+    background: #e2e8f0;
+}
+
+[data-theme="light"] .interests-section {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .interest-item {
+    background: #f1f5f9;
+}
+
+[data-theme="light"] .section-tag {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+    background: #f8fafc;
+    border-color: #e2e8f0;
 }
 
 /* ========================================
