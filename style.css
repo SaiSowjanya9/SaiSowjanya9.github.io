@@ -148,14 +148,13 @@ img {
     display: block;
 }
 
-/* Headings - Elegant Cursive Style */
+/* Headings - Elegant Thin Style */
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-title,
 .project-title,
 .edu-title {
     font-family: var(--font-heading);
-    font-style: italic;
     font-weight: 400;
     letter-spacing: 0.02em;
 }
@@ -452,7 +451,6 @@ h1, h2, h3, h4, h5, h6,
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-family: var(--font-heading);
     font-weight: 400;
-    font-style: italic;
     line-height: 1.1;
     margin-bottom: 16px;
 }
@@ -714,7 +712,6 @@ h1, h2, h3, h4, h5, h6,
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
-    font-style: italic;
     margin-bottom: 16px;
     position: relative;
 }
