@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Sowjanya Malipeddi | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/><text x='50' y='70' font-size='60' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <span class="logo-text">Sowjanya</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">
+                    <span class="wave">Hello!</span> I'm
+                </p>
+                <h1 class="hero-name">
+                    <span class="name-line">Sai Sowjanya</span>
+                    <span class="name-line gradient-text">Malipeddi</span>
+                </h1>
+                <div class="typewriter-container">
+                    <span class="typewriter-prefix">I'm a </span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Full-Stack Developer & Data Scientist crafting elegant solutions 
+                    with modern technologies. Passionate about building impactful applications 
+                    and turning data into actionable insights.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="profile-glow"></div>
+                    <div class="profile-image">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring ring-2"></div>
+                    </div>
+                    <div class="floating-icons">
+                        <div class="float-icon icon-1"><i class="fab fa-react"></i></div>
+                        <div class="float-icon icon-2"><i class="fab fa-python"></i></div>
+                        <div class="float-icon icon-3"><i class="fab fa-node-js"></i></div>
+                        <div class="float-icon icon-4"><i class="fas fa-database"></i></div>
+                        <div class="float-icon icon-5"><i class="fab fa-aws"></i></div>
+                        <div class="float-icon icon-6"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="about-shape shape-1"></div>
+                        <div class="about-shape shape-2"></div>
+                        <div class="code-block">
+                            <pre>
+<code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-key">name</span>: <span class="code-string">"Sai Sowjanya"</span>,
+  <span class="code-key">location</span>: <span class="code-string">"Frisco, TX"</span>,
+  <span class="code-key">role</span>: <span class="code-string">"Programmer Analyst"</span>,
+  <span class="code-key">education</span>: <span class="code-string">"MS Data Science"</span>,
+  <span class="code-key">passion</span>: [
+    <span class="code-string">"Full-Stack Dev"</span>,
+    <span class="code-string">"Data Science"</span>,
+    <span class="code-string">"Machine Learning"</span>
+  ],
+  <span class="code-key">motto</span>: <span class="code-string">"Code with purpose"</span>
+};</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <h3 class="about-headline">
+                        Passionate Developer & Data Enthusiast
+                    </h3>
+                    <p class="about-text">
+                        I'm a <strong>Programmer Analyst at Sage IT</strong> with a Master's in Data Science 
+                        from <strong>UT Arlington</strong>. I specialize in building robust full-stack applications 
+                        using <strong>React.js, Node.js, and MySQL</strong>, while leveraging my data science 
+                        background to create intelligent, data-driven solutions.
+                    </p>
+                    <p class="about-text">
+                        My journey spans from optimizing RESTful APIs and deploying scalable applications 
+                        to training CNN models and creating insightful data visualizations. I thrive on 
+                        solving complex problems and turning ideas into impactful products.
+                    </p>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Full-Stack Dev</h4>
+                            <p>React, Node.js, APIs</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>Data Science</h4>
+                            <p>ML, CNN, NLP</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h4>Data Analytics</h4>
+                            <p>Tableau, Power BI</p>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="mailto:saisowjanya218@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span>Let's Connect</span>
+                        </a>
+                        <a href="https://linkedin.com/in/sai-sowjanya-malipeddi" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker current">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Programmer Analyst</h3>
+                                <span class="company">Sage IT</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Texas</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Feb 2025 – Present</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span>React.js</span><span>Node.js</span><span>MySQL</span><span>REST APIs</span><span>PM2</span><span>VPS</span><span>RBAC</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Built and maintained an internal full-stack tool using React.js, Node.js, and MySQL, delivering new features for 6 internal stakeholders</li>
+                            <li>Built and integrated 12-15 RESTful API endpoints and optimized MySQL database layer; implemented authentication and RBAC</li>
+                            <li>Deployed application updates weekly to VPS using PM2, ensuring consistent uptime</li>
+                            <li>Built company's client-facing website end-to-end, later leading its migration to WordPress</li>
+                            <li>Delivered admin portal for clients, consolidating account and data management into single interface</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Data Science Intern</h3>
+                                <span class="company">Nubes Opus LLC</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Prosper, TX</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Aug 2024 – Jan 2025</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span><span>Data Pipelines</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Performed data cleaning and preprocessing on structured datasets for ML workflows at AI modernization consultancy</li>
+                            <li>Built SQL queries and data pipelines to extract, transform, and organize data</li>
+                            <li>Used Pandas for data wrangling across 10+ datasets, structuring data for downstream analysis</li>
+                            <li>Applied NumPy for numerical computations and array-based data transformations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Computer Aide</h3>
+                                <span class="company">UT Arlington</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Arlington, TX</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Jan 2024 – May 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-name">
+                            <i class="fas fa-project-diagram"></i> The Maverick — Knowledge Graph Research
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Enhanced algorithms for identifying 450 annotated exceptional data points; presented at research conferences</li>
+                            <li>Strengthened model precision by 20%, decreased errors by 30%, increased efficiency by 25%</li>
+                            <li>Created data visualizations using Tableau and Python for large-scale knowledge graph data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Research Assistant</h3>
+                                <span class="company">UT Arlington</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Arlington, TX</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Sep 2022 – May 2023</span>
+                            </div>
+                        </div>
+                        <div class="project-name">
+                            <i class="fas fa-bolt"></i> Energy Data Analytics and Visualization
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Cleaned 50,000 records, created 50+ visualizations with Tableau, Power BI, and Python</li>
+                            <li>Conducted time-series analysis improving data protection by 15%, cutting energy consumption by 10%</li>
+                            <li>Built Power BI dashboards using DAX for real-time energy consumption insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Web Developer Intern</h3>
+                                <span class="company">Carelon Global Solutions</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+                                <span class="date"><i class="fas fa-calendar"></i> May 2021 – Aug 2021</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span>Node.js</span><span>Laravel</span><span>REST APIs</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Implemented user registration, profile management, and secure payments for 1,000+ active users</li>
+                            <li>Achieved 30% faster response time and 25% increase in user engagement</li>
+                            <li>Optimized RESTful API endpoints enabling 2,000+ safe online transactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-grid">
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="TypeScript">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="C">
+                            <div class="skill-icon"><i class="fas fa-copyright"></i></div>
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="HTML/CSS">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="92"></div></div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js 18</span>
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+                        <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> Pandas</span>
+                        <span class="skill-tag"><i class="fas fa-calculator"></i> NumPy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> NoSQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data & BI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-chart-area"></i> Tableau</span>
+                        <span class="skill-tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                        <span class="skill-tag"><i class="fas fa-function"></i> DAX</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> ETL</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> CNN</span>
+                        <span class="skill-tag"><i class="fas fa-comment-dots"></i> NLP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-rocket"></i> PM2</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+                        <span class="skill-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                        <span class="skill-tag"><i class="fab fa-jira"></i> Jira</span>
+                        <span class="skill-tag"><i class="fas fa-sync"></i> Agile/Scrum</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> VPS</span>
+                        <span class="skill-tag"><i class="fas fa-key"></i> RBAC</span>
+                        <span class="skill-tag"><i class="fas fa-plug"></i> REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category certifications">
+                    <div class="category-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Courses & Certifications</h3>
+                    </div>
+                    <div class="cert-cards">
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                            <div class="cert-info">
+                                <h4>AWS Solutions Architect</h4>
+                                <p>Associate SAA-C03 (Udemy)</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fab fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Data Science Fundamentals</h4>
+                                <p>Python & SQL</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="cert-info">
+                                <h4>Digital Forensics & Crime Investigation</h4>
+                                <p>ISEA - 2021</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fab fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Python for Everybody</h4>
+                                <p>Coursera - 2020</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="cert-info">
+                                <h4>Raspberry Pi Platform & Python</h4>
+                                <p>Coursera - 2019</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-wifi"></i></div>
+                            <div class="cert-info">
+                                <h4>Internet of Things & Embedded Systems</h4>
+                                <p>Coursera - 2019</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="cert-info">
+                                <h4>Arduino Platform & C Programming</h4>
+                                <p>Coursera - 2019</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-user-secret"></i></div>
+                            <div class="cert-info">
+                                <h4>Ethical Hacking</h4>
+                                <p>Jnanabheri Knowledge Summit - 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="education-cards">
+                <div class="edu-card" data-aos="fade-right">
+                    <div class="edu-logo">
+                        <img src="images/uta-logo.svg" alt="UT Arlington Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3>Master of Science in Data Science</h3>
+                        <p class="edu-school">The University of Texas at Arlington</p>
+                        <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Arlington, TX</p>
+                        <p class="edu-date"><i class="fas fa-calendar-alt"></i> Aug 2022 – May 2024</p>
+                    </div>
+                    <div class="edu-decoration">
+                        <div class="edu-ring"></div>
+                    </div>
+                </div>
+                <div class="edu-card" data-aos="fade-left">
+                    <div class="edu-logo">
+                        <img src="images/andhra-university-logo.svg" alt="Andhra University Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Technology in Computer Science</h3>
+                        <p class="edu-school">Andhra University</p>
+                        <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, India</p>
+                        <p class="edu-date"><i class="fas fa-calendar-alt"></i> Aug 2018 – Jul 2022</p>
+                    </div>
+                    <div class="edu-decoration">
+                        <div class="edu-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured" data-aos="zoom-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop" alt="Mental Health AI" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag ml">Machine Learning</span>
+                            <span class="tag research">Research</span>
+                        </div>
+                        <h3 class="project-title">Suicidal Ideation Detection Tool</h3>
+                        <p class="project-description">
+                            A CNN-based NLP model trained on 100,000+ text samples for mental health risk 
+                            detection, achieving 92% accuracy with optimized hyperparameters reducing 
+                            false positives by 15%.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">92%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">90%</span>
+                                <span class="stat-label">Precision</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">89%</span>
+                                <span class="stat-label">F1-Score</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>CNN</span>
+                            <span>NLP</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag fullstack">Full-Stack</span>
+                        </div>
+                        <h3 class="project-title">Internal Operations Tool</h3>
+                        <p class="project-description">
+                            Full-stack application with React.js, Node.js, and MySQL supporting 
+                            6 internal stakeholders with 12-15 REST API endpoints.
+                        </p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>RBAC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=400&fit=crop" alt="Energy Analytics" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag data">Data Analytics</span>
+                        </div>
+                        <h3 class="project-title">Energy Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Time-series analysis of 50,000+ records with Power BI dashboards, 
+                            reducing energy consumption by 10%.
+                        </p>
+                        <div class="project-tech">
+                            <span>Tableau</span>
+                            <span>Power BI</span>
+                            <span>Python</span>
+                            <span>DAX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Knowledge Graph" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag research">Research</span>
+                        </div>
+                        <h3 class="project-title">Knowledge Graph Analysis</h3>
+                        <p class="project-description">
+                            Algorithm development for identifying 450 exceptional data points 
+                            with 20% improved precision, presented at research conferences.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Tableau</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&h=400&fit=crop" alt="Grocery Store" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag fullstack">Full-Stack</span>
+                        </div>
+                        <h3 class="project-title">Online Grocery Store</h3>
+                        <p class="project-description">
+                            E-commerce website with complete shopping functionality built using 
+                            HTML, CSS, JavaScript, and MySQL backend.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" alt="Music Player" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag ml">Python</span>
+                        </div>
+                        <h3 class="project-title">Real-Time Music Player</h3>
+                        <p class="project-description">
+                            Music player application that can access and play both online and 
+                            offline songs using Python and MySQL database.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>Streaming API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Facial Recognition" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag ml">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">Human Facial Recognition</h3>
+                        <p class="project-description">
+                            Python application using computer vision to establish accurate 
+                            human facial recognition capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Health Monitoring" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag data">IoT</span>
+                        </div>
+                        <h3 class="project-title">Wireless Pulse Rate Detector</h3>
+                        <p class="project-description">
+                            IoT-based health monitoring device using Arduino to detect and 
+                            transmit pulse rate data wirelessly.
+                        </p>
+                        <div class="project-tech">
+                            <span>Arduino</span>
+                            <span>IoT</span>
+                            <span>Sensors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="IoT Circuit" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag data">IoT</span>
+                        </div>
+                        <h3 class="project-title">IoT Programming</h3>
+                        <p class="project-description">
+                            Programming for the Internet of Things authorized by UC Irvine, 
+                            exploring embedded systems and connectivity.
+                        </p>
+                        <div class="project-tech">
+                            <span>IoT</span>
+                            <span>Embedded Systems</span>
+                            <span>C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1449965408869-euj69a3e8fce?w=600&h=400&fit=crop" alt="Traffic Analysis" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag data">Data Analytics</span>
+                        </div>
+                        <h3 class="project-title">Motor Vehicle Collision Analysis</h3>
+                        <p class="project-description">
+                            Comprehensive data analysis and visualization of motor vehicle 
+                            collision patterns to identify trends and safety insights.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Visualization</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80" alt="Graph Analysis" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag research">Research</span>
+                        </div>
+                        <h3 class="project-title">DBLP Dataset Analysis</h3>
+                        <p class="project-description">
+                            Graph-based analysis of DBLP dataset exploring graph 
+                            characteristics and network relationships.
+                        </p>
+                        <div class="project-tech">
+                            <span>Graph Analysis</span>
+                            <span>Python</span>
+                            <span>Networks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop" alt="Database Server" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag data">Data Analytics</span>
+                        </div>
+                        <h3 class="project-title">Disk-Based Data Analysis</h3>
+                        <p class="project-description">
+                            Advanced SQL-based data analysis project focusing on 
+                            efficient disk-based data processing techniques.
+                        </p>
+                        <div class="project-tech">
+                            <span>SQL</span>
+                            <span>Database</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Real Estate" class="project-cover">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag fullstack">Full-Stack</span>
+                        </div>
+                        <h3 class="project-title">Real-Time Residential Portal</h3>
+                        <p class="project-description">
+                            Full-stack residential management portal with real-time 
+                            features built using modern web technologies.
+                        </p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Beyond Work</span>
+                <h2 class="section-title">Leadership & Activities</h2>
+            </div>
+            <div class="leadership-grid">
+                <div class="leadership-card" data-aos="fade-up">
+                    <div class="leadership-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="leadership-content">
+                        <h3>Front-End Web Developer</h3>
+                        <p class="leadership-org">EDUMOON Club, CSE Technical Club</p>
+                        <p class="leadership-location"><i class="fas fa-map-marker-alt"></i> Andhra University, India</p>
+                    </div>
+                </div>
+
+                <div class="leadership-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leadership-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="leadership-content">
+                        <h3>Tech Lead</h3>
+                        <p class="leadership-org">Communications English Club & English Literature Club</p>
+                        <p class="leadership-location"><i class="fas fa-map-marker-alt"></i> Andhra University, India</p>
+                    </div>
+                </div>
+
+                <div class="leadership-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leadership-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="leadership-content">
+                        <h3>Campus Ambassador</h3>
+                        <p class="leadership-org">Internshala & College Dunia</p>
+                        <p class="leadership-location"><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div class="leadership-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leadership-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="leadership-content">
+                        <h3>Sponsorship Lead</h3>
+                        <p class="leadership-org">Anusandhan, Cultural & Technical Fest</p>
+                        <p class="leadership-location"><i class="fas fa-trophy"></i> Raised INR 20 Lakhs in sponsorships</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests-section">
+                <h3 class="interests-title"><i class="fas fa-heart"></i> Interests & Hobbies</h3>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-table-tennis"></i>
+                        <span>Badminton Player</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-music"></i>
+                        <span>Freestyle Dancer</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-guitar"></i>
+                        <span>Ukulele Expert</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-book-open"></i>
+                        <span>Fiction Books</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">
+                    I'm currently open to new opportunities. Whether you have a question 
+                    or just want to say hi, feel free to reach out!
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:saisowjanya218@gmail.com">saisowjanya218@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+16823744893">682-374-4893</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Frisco, TX 75034</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/sai-sowjanya-malipeddi" target="_blank">
+                                linkedin.com/in/sai-sowjanya-malipeddi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="logo-text">Sowjanya</span>
+                    </div>
+                    <p>Building digital experiences with passion and precision.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:saisowjanya218@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sai-sowjanya-malipeddi" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sai Sowjanya Malipeddi. All Rights Reserved.</p>
+                <p class="footer-tagline">Crafted with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

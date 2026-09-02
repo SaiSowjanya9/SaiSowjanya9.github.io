@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <!-- U -->
+  <path d="M10 10 L10 60 Q10 85 35 85 Q60 85 60 60 L60 10 L45 10 L45 58 Q45 72 35 72 Q25 72 25 58 L25 10 Z" fill="#0064B1"/>
+  
+  <!-- T -->
+  <path d="M70 10 L70 25 L85 25 L85 85 L100 85 L100 25 L115 25 L115 10 Z" fill="#0064B1"/>
+  
+  <!-- A with star cutout -->
+  <path d="M120 85 L135 10 L165 10 L180 85 L163 85 L159 70 L141 70 L137 85 Z M150 30 L144 55 L156 55 Z" fill="#0064B1"/>
+  
+  <!-- Orange Star inside A -->
+  <polygon points="150,25 153,35 163,35 155,42 158,52 150,46 142,52 145,42 137,35 147,35" fill="#F47920"/>
+  <polygon points="150,30 152,37 159,37 153,42 156,49 150,45 144,49 147,42 141,37 148,37" fill="#FFB347"/>
+  
+  <!-- Text: THE UNIVERSITY OF TEXAS -->
+  <text x="100" y="102" font-family="Times New Roman, serif" font-size="11" fill="#1a1a1a" text-anchor="middle" letter-spacing="2">THE UNIVERSITY OF TEXAS</text>
+  
+  <!-- Text: AT ARLINGTON -->
+  <text x="100" y="116" font-family="Times New Roman, serif" font-size="11" fill="#1a1a1a" text-anchor="middle" letter-spacing="2">AT ARLINGTON</text>
+</svg>
