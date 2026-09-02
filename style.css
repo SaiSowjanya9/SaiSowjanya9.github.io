@@ -1486,32 +1486,38 @@ h1, h2, h3, h4, h5, h6,
    Contact Section
 ======================================== */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    display: flex;
+    justify-content: center;
     align-items: start;
 }
 
 .contact-info {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
 }
 
 .contact-card {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 20px;
+    padding: 24px 32px;
     background: var(--bg-card);
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all var(--transition-fast);
+    min-width: 280px;
+    flex: 1;
+    max-width: 350px;
 }
 
 .contact-card:hover {
     border-color: var(--accent-primary);
-    transform: translateX(5px);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
 }
 
 .contact-icon {
