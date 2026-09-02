@@ -27,6 +27,7 @@
     
     /* Typography */
     --font-primary: 'Poppins', sans-serif;
+    --font-heading: 'Playfair Display', serif;
     --font-code: 'Fira Code', monospace;
     
     /* Transitions */
@@ -99,6 +100,18 @@ ul {
 img {
     max-width: 100%;
     display: block;
+}
+
+/* Headings - Elegant Cursive Style */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-title,
+.project-title,
+.edu-title {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.02em;
 }
 
 /* Container */
@@ -391,7 +404,9 @@ img {
 
 .hero-name {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: italic;
     line-height: 1.1;
     margin-bottom: 16px;
 }
@@ -652,7 +667,8 @@ img {
 
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-weight: 400;
+    font-style: italic;
     margin-bottom: 16px;
     position: relative;
 }
