@@ -380,9 +380,18 @@ function animateCounter(element) {
 // ========================================
 function initContactForm() {
     const form = document.getElementById('contactForm');
+    if (!form) return;
     
-    form.addEventListener('submit', async (e) => {
+    // Prevent any default form submission
+    form.onsubmit = function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        return false;
+    };
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
@@ -398,10 +407,10 @@ function initContactForm() {
         const message = form.querySelector('#message').value;
         
         // Create mailto link
-        const mailtoLink = `mailto:saisowjanya218@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        const mailtoLink = `mailto:saisowjanya218@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
         
         // Open email client
-        window.location.href = mailtoLink;
+        window.open(mailtoLink, '_self');
         
         // Show success
         submitBtn.innerHTML = '<i class="fas fa-check"></i> Opening Email...';
